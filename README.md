@@ -31,7 +31,7 @@ Two models generate investigation task responses for each case:
 
 ## 2. Multi-Judge Evaluation
 
-Multiple LLM judges independently evaluate the generated responses using consistent criteria:
+While LLM-based test oracle is not completely error free, represntative information can still be gathered by aggregating multiple LLM judges. In this stage, multiple LLM judges are employed to independently evaluate the generated responses using consistent criteria:
 
 **Evaluation Criteria**:
 - SOC knowledge depth and accuracy
@@ -51,6 +51,8 @@ Multiple LLM judges independently evaluate the generated responses using consist
 - Each judge compares responses from Model A and Model B
 - Judges select the higher quality response out of the two response
 - Output: Separate evaluation files for each judge model
+
+By aggregating judge runs across multiple different LLM models, mistakes caused by biases and non-determinism can be dullified.
 
 # Results
 
